@@ -1,0 +1,420 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shappro AI - O aplicativo #1 de performance pessoal. Treinos e dietas personalizados com inteligência artificial.">
+    
+    <!-- Open Graph (Para redes sociais) -->
+    <meta property="og:title" content="Shappro AI - Transformação Real">
+    <meta property="og:description" content="Transforme seu corpo em 12 semanas com o poder da Inteligência Artificial.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1000&auto=format&fit=crop">
+
+    <title>Shappro AI - Transformação Real</title>
+    
+    <!-- Tailwind CSS para Estilização Rápida e Moderna -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+            color: #fff;
+            overflow-x: hidden;
+        }
+        .bg-gradient-hero {
+            background: radial-gradient(circle at top right, #1a1a1a 0%, #000000 100%);
+        }
+        .shappro-glow {
+            box-shadow: 0 0 30px rgba(163, 230, 53, 0.15);
+        }
+        @keyframes pulse-soft {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.8; transform: scale(1.05); }
+        }
+        .animate-stats {
+            animation: pulse-soft 3.5s infinite ease-in-out;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease-out;
+        }
+        .faq-item.active .faq-content {
+            max-height: 300px;
+            padding-top: 1rem;
+        }
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-6">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                <div class="w-10 h-10 bg-lime-400 rounded-lg flex items-center justify-center shappro-glow">
+                    <span class="text-black font-extrabold text-xl">S</span>
+                </div>
+                <span class="font-bold text-xl tracking-tighter uppercase text-white">Shap<span class="text-lime-400">pro</span></span>
+            </div>
+            
+            <nav class="hidden md:flex gap-8 text-xs font-bold uppercase tracking-widest text-gray-400">
+                <a href="#beneficios" class="hover:text-lime-400 transition">Benefícios</a>
+                <a href="#depoimentos" class="hover:text-lime-400 transition">Resultados</a>
+                <a href="#checkout" class="hover:text-lime-400 transition">Preço</a>
+            </nav>
+
+            <a href="https://pay.kirvano.com/dc2fb612-6c0c-4c95-ab7a-831f1a5b7ff6" target="_blank" class="bg-lime-400 text-black px-7 py-2.5 rounded-full font-bold text-sm hover:bg-white transition-all transform hover:scale-105 shadow-xl">
+                OBTER ACESSO
+            </a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen pt-40 pb-20 flex items-center overflow-hidden bg-gradient-hero">
+        <div class="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-lime-400/10 blur-[130px] rounded-full"></div>
+        
+        <div class="container mx-auto px-6 relative z-10 grid lg:grid-cols-2 gap-16 items-center">
+            <div class="max-w-2xl text-center lg:text-left">
+                <div class="inline-flex items-center gap-2 px-4 py-1.5 bg-lime-400/10 border border-lime-400/20 text-lime-400 rounded-full text-xs font-black tracking-widest mb-8 uppercase">
+                    <span class="relative flex h-2 w-2">
+                      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
+                      <span class="relative inline-flex rounded-full h-2 w-2 bg-lime-400"></span>
+                    </span>
+                    Aplicativo #1 de Performance Pessoal
+                </div>
+                <h1 class="text-5xl md:text-8xl font-extrabold leading-[1.1] mb-8 tracking-tighter">
+                    Transforme seu corpo em <span class="text-lime-400 italic">12 semanas.</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-400 mb-12 leading-relaxed font-light">
+                    O Shappro AI cria o protocolo exato para o seu biotipo, rotina e objetivos. Esqueça dietas genéricas, tenha resultados reais.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-5 items-center justify-center lg:justify-start">
+                    <a href="#checkout" class="w-full sm:w-auto px-12 py-6 bg-lime-400 text-black rounded-2xl font-black text-xl hover:scale-105 transition-all text-center shadow-2xl shadow-lime-400/30">
+                        COMEÇAR AGORA
+                    </a>
+                    <div class="flex items-center gap-4 py-4 px-6 bg-zinc-900/50 rounded-2xl border border-white/5">
+                        <div class="flex -space-x-3">
+                            <img src="https://i.pravatar.cc/100?u=1" class="w-10 h-10 rounded-full border-2 border-black" alt="User">
+                            <img src="https://i.pravatar.cc/100?u=2" class="w-10 h-10 rounded-full border-2 border-black" alt="User">
+                            <img src="https://i.pravatar.cc/100?u=3" class="w-10 h-10 rounded-full border-2 border-black" alt="User">
+                        </div>
+                        <div>
+                            <p class="text-xs font-black text-white">+15k membros</p>
+                            <div class="text-lime-400 text-[10px] tracking-widest font-bold">⭐⭐⭐⭐⭐</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative hidden lg:block">
+                <div class="relative z-10 p-4 glass rounded-[40px] border border-white/10 rotate-3 hover:rotate-0 transition-transform duration-700">
+                    <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop" alt="App Dashboard" class="rounded-[30px] shadow-2xl mx-auto w-full object-cover">
+                </div>
+                <!-- Stats Floating -->
+                <div class="absolute -top-6 -right-6 bg-zinc-900 p-5 rounded-3xl border border-white/10 shadow-2xl z-20 animate-stats">
+                    <p class="text-[10px] text-gray-500 uppercase font-black mb-1">Gordura Corporal</p>
+                    <p class="text-3xl font-black text-lime-400">-12.4%</p>
+                </div>
+                <div class="absolute -bottom-6 -left-6 bg-zinc-900 p-5 rounded-3xl border border-white/10 shadow-2xl z-20 animate-stats" style="animation-delay: 1.5s">
+                    <p class="text-[10px] text-gray-500 uppercase font-black mb-1">Massa Magra</p>
+                    <p class="text-3xl font-black text-blue-400">+5.2kg</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof Logos -->
+    <div class="py-12 border-y border-white/5 bg-zinc-950/50">
+        <div class="container mx-auto px-6 flex flex-wrap justify-center gap-12 md:gap-24 opacity-30 grayscale contrast-125">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/800px-Apple_logo_black.svg.png" class="h-8 invert" alt="Apple">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c1/Google_Fit_logo.svg/2560px-Google_Fit_logo.svg.png" class="h-8 invert" alt="Google Fit">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Garmin_logo.svg/2560px-Garmin_logo.svg.png" class="h-6 invert" alt="Garmin">
+             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Strava_logo.svg/2560px-Strava_logo.svg.png" class="h-8 invert" alt="Strava">
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <section id="beneficios" class="py-32 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20">
+                <h2 class="text-4xl md:text-6xl font-black mb-6 tracking-tighter">Tecnologia de <span class="text-lime-400">Elite.</span></h2>
+                <p class="text-xl text-gray-400 font-light leading-relaxed">Não somos apenas um app de treinos. Somos o seu mentor tecnológico disponível 24h por dia.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-10 rounded-[35px] glass hover:border-lime-400 transition-all group cursor-default">
+                    <div class="text-4xl mb-8 group-hover:scale-110 transition-transform">⚡</div>
+                    <h3 class="text-2xl font-bold mb-4">IA Adaptativa</h3>
+                    <p class="text-gray-400 leading-relaxed font-light">O app aprende com seus treinos. Ficou fácil? Ele aumenta a carga. Ficou difícil? Ele ajusta a técnica.</p>
+                </div>
+                <div class="p-10 rounded-[35px] glass hover:border-lime-400 transition-all group cursor-default">
+                    <div class="text-4xl mb-8 group-hover:scale-110 transition-transform">🍎</div>
+                    <h3 class="text-2xl font-bold mb-4">Bio-Dieta</h3>
+                    <p class="text-gray-400 leading-relaxed font-light">Cálculo de macros preciso e receitas que você realmente gosta de comer, sem passar fome.</p>
+                </div>
+                <div class="p-10 rounded-[35px] glass hover:border-lime-400 transition-all group cursor-default">
+                    <div class="text-4xl mb-8 group-hover:scale-110 transition-transform">📊</div>
+                    <h3 class="text-2xl font-bold mb-4">Métricas Reais</h3>
+                    <p class="text-gray-400 leading-relaxed font-light">Integração total com Smartwatches para analisar seu sono, estresse e recuperação.</p>
+                </div>
+                <div class="p-10 rounded-[35px] glass hover:border-lime-400 transition-all group cursor-default">
+                    <div class="text-4xl mb-8 group-hover:scale-110 transition-transform">🤝</div>
+                    <h3 class="text-2xl font-bold mb-4">Comunidade</h3>
+                    <p class="text-gray-400 leading-relaxed font-light">Acesso a um grupo VIP de alta performance para troca de experiências e desafios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="py-32 bg-zinc-950">
+        <div class="container mx-auto px-6 text-center lg:text-left">
+            <h2 class="text-4xl md:text-6xl font-black mb-16 tracking-tighter text-center">Resultados <span class="text-lime-400">Reais.</span></h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-zinc-900 p-10 rounded-[40px] border border-white/5 relative overflow-hidden h-full flex flex-col">
+                    <span class="absolute top-6 right-6 text-[10px] font-black uppercase bg-lime-400 text-black px-3 py-1 rounded-full">-12kg em 90 dias</span>
+                    <p class="text-gray-300 text-lg mb-10 leading-relaxed italic font-light">"O Shappro mudou minha vida. Em 3 meses perdi 12kg e minha disposição para o trabalho triplicou."</p>
+                    <div class="mt-auto flex items-center gap-4">
+                        <img src="https://i.pravatar.cc/150?u=8" class="w-12 h-12 rounded-full border-2 border-lime-400" alt="Avatar">
+                        <div class="text-left">
+                            <h4 class="font-bold text-white">Ricardo Mendes</h4>
+                            <p class="text-xs text-gray-500 uppercase font-bold">Empresário</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 p-10 rounded-[40px] border border-white/5 relative overflow-hidden h-full flex flex-col">
+                    <span class="absolute top-6 right-6 text-[10px] font-black uppercase bg-lime-400 text-black px-3 py-1 rounded-full">+4kg Massa Magra</span>
+                    <p class="text-gray-300 text-lg mb-10 leading-relaxed italic font-light">"Os treinos são intensos e diretos ao ponto. Nunca tive tanta definição em tão pouco tempo."</p>
+                    <div class="mt-auto flex items-center gap-4">
+                        <img src="https://i.pravatar.cc/150?u=9" class="w-12 h-12 rounded-full border-2 border-lime-400" alt="Avatar">
+                        <div class="text-left">
+                            <h4 class="font-bold text-white">Ana Beatriz</h4>
+                            <p class="text-xs text-gray-500 uppercase font-bold">Atleta Amadora</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 p-10 rounded-[40px] border border-white/5 relative overflow-hidden h-full flex flex-col">
+                    <span class="absolute top-6 right-6 text-[10px] font-black uppercase bg-lime-400 text-black px-3 py-1 rounded-full">-15% BF</span>
+                    <p class="text-gray-300 text-lg mb-10 leading-relaxed italic font-light">"A integração com o Apple Watch é a melhor que já vi. Dados reais, sem achismo."</p>
+                    <div class="mt-auto flex items-center gap-4">
+                        <img src="https://i.pravatar.cc/150?u=10" class="w-12 h-12 rounded-full border-2 border-lime-400" alt="Avatar">
+                        <div class="text-left">
+                            <h4 class="font-bold text-white">Carlos Eduardo</h4>
+                            <p class="text-xs text-gray-500 uppercase font-bold">Desenvolvedor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing / Checkout Section -->
+    <section id="checkout" class="py-32 bg-black">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto glass rounded-[50px] overflow-hidden border border-white/10 shadow-2xl">
+                <div class="grid md:grid-cols-5">
+                    <!-- Esquerda -->
+                    <div class="md:col-span-3 p-12 md:p-16 flex flex-col justify-center border-r border-white/5">
+                        <h3 class="text-4xl font-black mb-8 tracking-tighter">Oferta de <span class="text-lime-400">Lançamento.</span></h3>
+                        <p class="text-gray-400 mb-10 text-lg font-light italic">Acesso total e vitalício à plataforma Shappro AI. Sem assinaturas mensais.</p>
+                        
+                        <div class="grid sm:grid-cols-2 gap-6">
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-6 bg-lime-400 text-black rounded-full flex items-center justify-center text-[10px] font-black">✓</span>
+                                <span class="text-sm font-bold text-gray-300">Treinos Ilimitados</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-6 bg-lime-400 text-black rounded-full flex items-center justify-center text-[10px] font-black">✓</span>
+                                <span class="text-sm font-bold text-gray-300">Bio-Dieta IA</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-6 bg-lime-400 text-black rounded-full flex items-center justify-center text-[10px] font-black">✓</span>
+                                <span class="text-sm font-bold text-gray-300">Suporte WhatsApp</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="w-6 h-6 bg-lime-400 text-black rounded-full flex items-center justify-center text-[10px] font-black">✓</span>
+                                <span class="text-sm font-bold text-gray-300">Acesso Vitalício</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Direita (Preço) -->
+                    <div class="md:col-span-2 p-12 md:p-16 bg-zinc-900/50 flex flex-col justify-center items-center text-center">
+                        <div class="mb-10">
+                            <span class="text-zinc-600 line-through text-xl block mb-2 font-bold italic">De R$ 197,00 por</span>
+                            <div class="flex items-center justify-center gap-1">
+                                <span class="text-sm font-black text-lime-400 self-start mt-4">R$</span>
+                                <span class="text-8xl font-black text-white tracking-tighter">47</span>
+                                <span class="text-2xl font-black text-white self-end mb-4">,90</span>
+                            </div>
+                        </div>
+
+                        <a href="https://pay.kirvano.com/dc2fb612-6c0c-4c95-ab7a-831f1a5b7ff6" target="_blank" class="w-full py-6 bg-lime-400 text-black rounded-3xl font-black text-xl hover:scale-105 transition-all shadow-xl shadow-lime-400/20 mb-8 uppercase">
+                            QUERO MUDAR AGORA
+                        </a>
+
+                        <div class="flex flex-col items-center gap-4 opacity-40">
+                            <div class="flex gap-4">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a2/Logo_Pix.png" class="h-4" alt="Pix">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/2560px-Visa_Inc._logo.svg.png" class="h-4" alt="Visa">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Mastercard-logo.svg/1280px-Mastercard-logo.svg.png" class="h-6" alt="Master">
+                            </div>
+                            <p class="text-[10px] font-bold uppercase tracking-widest">Pagamento 100% Seguro</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 text-center max-w-xl mx-auto p-6 bg-zinc-900/30 rounded-3xl border border-white/5 flex items-center gap-6">
+                <div class="w-16 h-16 bg-lime-400/20 rounded-full flex items-center justify-center shrink-0 border border-lime-400/30">
+                    <span class="text-2xl font-bold text-lime-400">7</span>
+                </div>
+                <div class="text-left">
+                    <h5 class="text-sm font-black text-white uppercase mb-1 tracking-tighter">Garantia Incondicional</h5>
+                    <p class="text-xs text-gray-500 font-light leading-relaxed">Você tem 7 dias para testar. Se não ver resultados, devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-32 bg-zinc-950">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-16 tracking-tighter">Dúvidas <span class="text-lime-400">Frequentes.</span></h2>
+            
+            <div class="space-y-4">
+                <div class="faq-item border border-white/5 rounded-[25px] overflow-hidden bg-zinc-900/50">
+                    <button class="w-full p-8 text-left flex justify-between items-center hover:bg-zinc-800 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">Preciso de equipamentos?</span>
+                        <span class="faq-icon text-3xl font-light transition-transform duration-300 text-lime-400">+</span>
+                    </button>
+                    <div class="faq-content px-8">
+                        <div class="pb-8 text-gray-400 leading-relaxed font-light">Não! O Shappro possui módulos específicos para treinos em casa (Home Workout), utilizando apenas o peso do corpo ou objetos domésticos simples.</div>
+                    </div>
+                </div>
+                <div class="faq-item border border-white/5 rounded-[25px] overflow-hidden bg-zinc-900/50">
+                    <button class="w-full p-8 text-left flex justify-between items-center hover:bg-zinc-800 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">O app é para iniciantes?</span>
+                        <span class="faq-icon text-3xl font-light transition-transform duration-300 text-lime-400">+</span>
+                    </button>
+                    <div class="faq-content px-8">
+                        <div class="pb-8 text-gray-400 leading-relaxed font-light">Com certeza. Nossa IA identifica seu nível atual e cria um plano de progressão segura para evitar lesões e garantir resultados constantes desde o primeiro dia.</div>
+                    </div>
+                </div>
+                <div class="faq-item border border-white/5 rounded-[25px] overflow-hidden bg-zinc-900/50">
+                    <button class="w-full p-8 text-left flex justify-between items-center hover:bg-zinc-800 transition-colors" onclick="toggleFaq(this)">
+                        <span class="font-bold text-lg">Como recebo o acesso?</span>
+                        <span class="faq-icon text-3xl font-light transition-transform duration-300 text-lime-400">+</span>
+                    </button>
+                    <div class="faq-content px-8">
+                        <div class="pb-8 text-gray-400 leading-relaxed font-light">O acesso é imediato! Assim que o pagamento for confirmado, você receberá os dados de login no seu e-mail cadastrado. No Pix e Cartão, o envio é instantâneo.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-20 bg-black border-t border-white/5">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+                <div class="flex flex-col items-center md:items-start gap-4">
+                    <div class="flex items-center gap-2">
+                        <div class="w-8 h-8 bg-lime-400 rounded-lg flex items-center justify-center">
+                            <span class="text-black font-extrabold text-sm">S</span>
+                        </div>
+                        <span class="font-bold tracking-tighter text-xl uppercase">Shap<span class="text-lime-400">pro</span></span>
+                    </div>
+                    <p class="text-gray-600 text-xs font-bold uppercase tracking-widest italic">High Performance Health Systems</p>
+                </div>
+                
+                <div class="flex gap-8 text-gray-500 text-sm font-bold uppercase tracking-widest">
+                    <a href="#" class="hover:text-lime-400 transition">Privacidade</a>
+                    <a href="#" class="hover:text-lime-400 transition">Termos</a>
+                    <a href="#" class="hover:text-lime-400 transition">Contato</a>
+                </div>
+
+                <div class="text-gray-600 text-xs">
+                    © 2024 Shappro AI. Todos os direitos reservados.
+                </div>
+            </div>
+            
+            <div class="mt-20 text-center text-[10px] text-zinc-800 uppercase tracking-[0.2em] leading-loose max-w-4xl mx-auto">
+                AVISO: Os resultados individuais podem variar. Sempre consulte um médico antes de iniciar qualquer programa de exercícios ou mudança na sua dieta. Este produto não substitui o aconselhamento profissional.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts JavaScript Vanilla -->
+    <script>
+        // Efeito de Header no Scroll
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 80) {
+                header.classList.add('bg-black/90', 'backdrop-blur-xl', 'py-4', 'border-b', 'border-white/5');
+                header.classList.remove('py-6');
+            } else {
+                header.classList.remove('bg-black/90', 'backdrop-blur-xl', 'py-4', 'border-b', 'border-white/5');
+                header.classList.add('py-6');
+            }
+        });
+
+        // Lógica do FAQ (Accordion)
+        function toggleFaq(button) {
+            const item = button.parentElement;
+            const isActive = item.classList.contains('active');
+            
+            // Fecha todos os itens abertos
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+            
+            // Se o clicado não estava aberto, abre ele
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
+        // Suporte para cliques em links âncora com offset para o header fixo
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    const headerOffset = 100;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: "smooth"
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
